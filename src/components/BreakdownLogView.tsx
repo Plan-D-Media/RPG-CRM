@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BreakdownLog } from '../types/crmExtended';
+import type { RolePermissions } from '../services/permissions';
 import {
   Wrench,
   PlusCircle,
@@ -24,6 +25,7 @@ interface BreakdownLogViewProps {
   onUpdateBreakdown?: (updated: BreakdownLog) => void;
   onDeleteBreakdown?: (id: string) => void;
   initialMode?: 'add' | 'view';
+  permissions?: RolePermissions;
 }
 
 // ─── Shared style helpers ────────────────────────────────────────────────────

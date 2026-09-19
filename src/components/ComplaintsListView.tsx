@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ComplaintTicket } from '../types/crm';
+import type { RolePermissions } from '../services/permissions';
 import { AddComplaintForm } from './AddComplaintForm';
 import { EditComplaintModal, AssignModal, DeleteConfirmModal, ReportModal } from './ComplaintActionModals';
 import {
@@ -22,6 +23,7 @@ interface ComplaintsListViewProps {
   onAddComplaint: (ticket: ComplaintTicket) => void;
   onUpdateComplaint: (ticket: ComplaintTicket) => void;
   onDeleteComplaint: (id: string) => void;
+  permissions?: RolePermissions;
 }
 
 export const ComplaintsListView: React.FC<ComplaintsListViewProps> = ({

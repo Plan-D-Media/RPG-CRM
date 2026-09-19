@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { InternalComplaint } from '../types/crmExtended';
+import type { RolePermissions } from '../services/permissions';
 import {
   ShieldAlert,
   CheckCircle2,
@@ -18,6 +19,7 @@ interface InternalComplaintsViewProps {
   onUpdateInternalComplaint?: (updated: InternalComplaint) => void;
   onDeleteInternalComplaint?: (id: string) => void;
   initialMode?: 'add' | 'view';
+  permissions?: RolePermissions;
 }
 
 // ─── Style helpers ───────────────────────────────────────────────────────────

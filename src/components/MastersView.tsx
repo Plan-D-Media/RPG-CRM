@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MasterCategoryType, MasterItem } from '../types/crmExtended';
+import type { RolePermissions } from '../services/permissions';
 import { 
   Settings, 
   Plus, 
@@ -19,6 +20,7 @@ interface MastersViewProps {
   onSelectCategory: (cat: MasterCategoryType) => void;
   onAddMasterItem: (item: MasterItem) => void;
   onDeleteMasterItem: (id: string) => void;
+  permissions?: RolePermissions;
 }
 
 export const MastersView: React.FC<MastersViewProps> = ({
